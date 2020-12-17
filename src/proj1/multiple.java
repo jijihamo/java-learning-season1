@@ -123,8 +123,9 @@ public class multiple {
 		int num = scan.nextInt();
 		
 		System.out.println("[备备窜 " + num + "窜]");
-		for (int i = 1; i <= result.length; i++) {
-			System.out.println(num + " * " + i + " = " + num * i);
+		for (int i = 0; i < result.length; i++) {
+			result[i] = num * (i + 1);
+			System.out.println(num + " * " + (i + 1) + " = " + result[i]);
 		}
 		
 	}
@@ -136,8 +137,9 @@ public class multiple {
 		
 		for (int i = num1; i < 10; i++) {
 			System.out.println("[备备窜 " + i + "窜]");
-			for (int j = 1; j < result.length; j++) {
-				System.out.println(i + " * " + j + " = " + i * j);
+			for (int j = 0; j < result.length; j++) {
+				result[j] = i * (j + 1);
+				System.out.println(i + " * " + (j + 1) + " = " + result[j]);
 			}
 			System.out.println("");
 		}
