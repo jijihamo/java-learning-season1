@@ -18,8 +18,13 @@ public class multiple {
 		//gugudan3(6, num2);
 		
 		/* 8, 9단 */
-		gugudan4(num1, num2);
+		//gugudan4(num1, num2);
 		
+		/* 배열로 지정 구구단 구현 */
+		//gugudan5();
+		
+		/* 배열로 전체 구구단 구현 */
+		gugudan6();
 	}
 	
 	public static void gugudan1(int num1, int num2) {
@@ -107,5 +112,35 @@ public class multiple {
 		for (int i = num2; i < 10; i++) {
 			System.out.println(num1 + " * " + i + " = " + num1 * i);
 		}
+	}
+	
+	public static void gugudan5() {
+		
+		int[] result = new int[9];
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("숫자를 입력하세요.");
+		int num = scan.nextInt();
+		
+		System.out.println("[구구단 " + num + "단]");
+		for (int i = 1; i <= result.length; i++) {
+			System.out.println(num + " * " + i + " = " + num * i);
+		}
+		
+	}
+	
+	public static void gugudan6() {
+		
+		int[] result = new int[9];
+		int num1 = 2;
+		
+		for (int i = num1; i < 10; i++) {
+			System.out.println("[구구단 " + i + "단]");
+			for (int j = 1; j < result.length; j++) {
+				System.out.println(i + " * " + j + " = " + i * j);
+			}
+			System.out.println("");
+		}
+		
 	}
 }
