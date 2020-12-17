@@ -15,7 +15,10 @@ public class multiple {
 		//gugudan2(num1, num2);
 		
 		/* 6, 7단 */
-		gugudan3(6, num2);
+		//gugudan3(6, num2);
+		
+		/* 8, 9단 */
+		gugudan4(num1, num2);
 		
 	}
 	
@@ -85,6 +88,24 @@ public class multiple {
 		while (cnt < 10) {
 			System.out.println(num1 + " * " + cnt + " = " + num1 * cnt);
 			cnt++;
+		}
+	}
+	
+	public static void gugudan4(int num1, int num2) {
+		
+		System.out.println("구구단 중 출력할 단은 ? : ");
+		
+		Scanner scan = new Scanner(System.in);
+		num1 = scan.nextInt();
+		
+		if (!(num1 >= 2 && num1 <= 9)) {
+			System.out.println("2 이상, 9 이하의 값만 입력할 수 있습니다.");
+			return;
+		}
+		
+		System.out.println("[구구단 " + num1 + "단]");
+		for (int i = num2; i < 10; i++) {
+			System.out.println(num1 + " * " + i + " = " + num1 * i);
 		}
 	}
 }
